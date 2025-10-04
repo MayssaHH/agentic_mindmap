@@ -1,4 +1,5 @@
 # Agentic Mindmap - PDF to Knowledge Graph
+Team members: Mayssa Hajj Hassan - Mariam Salman - Mohamad Bazzi
 
 ![Image](architecture.png)
 
