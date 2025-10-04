@@ -1,0 +1,569 @@
+{
+  "nodes": [
+    {
+      "id": "node_1",
+      "title": "Course Introduction and Structure",
+      "type": "central"
+    },
+    {
+      "id": "node_2",
+      "title": "EECE 503P/798S",
+      "type": "subnode"
+    },
+    {
+      "id": "node_3",
+      "title": "Agentic Systems",
+      "type": "subnode"
+    },
+    {
+      "id": "node_4",
+      "title": "Large Language Models",
+      "type": "subnode"
+    },
+    {
+      "id": "node_5",
+      "title": "American University of Beirut",
+      "type": "subnode"
+    },
+    {
+      "id": "node_6",
+      "title": "Fall 2025",
+      "type": "subnode"
+    },
+    {
+      "id": "node_7",
+      "title": "Course Timeline",
+      "type": "subnode"
+    },
+    {
+      "id": "node_8",
+      "title": "Introduction to Generative AI",
+      "type": "subnode"
+    },
+    {
+      "id": "node_9",
+      "title": "Deep Dive to LLMs",
+      "type": "subnode"
+    },
+    {
+      "id": "node_10",
+      "title": "Introduction to Agents",
+      "type": "subnode"
+    },
+    {
+      "id": "node_11",
+      "title": "Agent Components",
+      "type": "subnode"
+    },
+    {
+      "id": "node_12",
+      "title": "Agent Architectures",
+      "type": "subnode"
+    },
+    {
+      "id": "node_13",
+      "title": "Evaluation and Scalability",
+      "type": "subnode"
+    },
+    {
+      "id": "node_14",
+      "title": "Course Feedback and Challenges",
+      "type": "central"
+    },
+    {
+      "id": "node_15",
+      "title": "Project Challenges",
+      "type": "subnode"
+    },
+    {
+      "id": "node_16",
+      "title": "Assignment Challenges",
+      "type": "subnode"
+    },
+    {
+      "id": "node_17",
+      "title": "Pace and Complexity",
+      "type": "subnode"
+    },
+    {
+      "id": "node_18",
+      "title": "Structure & Expectations",
+      "type": "subnode"
+    },
+    {
+      "id": "node_19",
+      "title": "Introduction to Large Language Models (LLMs)",
+      "type": "central"
+    },
+    {
+      "id": "node_20",
+      "title": "LLMs Definition & Evolution",
+      "type": "subnode"
+    },
+    {
+      "id": "node_21",
+      "title": "Model Characteristics",
+      "type": "subnode"
+    },
+    {
+      "id": "node_22",
+      "title": "Emergent Behaviors",
+      "type": "subnode"
+    },
+    {
+      "id": "node_23",
+      "title": "Prompting Techniques",
+      "type": "subnode"
+    },
+    {
+      "id": "node_24",
+      "title": "LLM Architectures",
+      "type": "subnode"
+    },
+    {
+      "id": "node_25",
+      "title": "Recent Advancements",
+      "type": "subnode"
+    },
+    {
+      "id": "node_26",
+      "title": "Fine-tuning & Evaluation",
+      "type": "subnode"
+    },
+    {
+      "id": "node_27",
+      "title": "Open vs. Closed Source",
+      "type": "subnode"
+    },
+    {
+      "id": "node_28",
+      "title": "Early Foundations",
+      "type": "subnode"
+    },
+    {
+      "id": "node_29",
+      "title": "Deep Learning Rise",
+      "type": "subnode"
+    },
+    {
+      "id": "node_30",
+      "title": "VAEs/GANs (2014)",
+      "type": "subnode"
+    },
+    {
+      "id": "node_31",
+      "title": "Transformer (2017)",
+      "type": "subnode"
+    },
+    {
+      "id": "node_32",
+      "title": "LLMs (2022)",
+      "type": "subnode"
+    },
+    {
+      "id": "node_33",
+      "title": "What are LLMs?",
+      "type": "subnode"
+    },
+    {
+      "id": "node_34",
+      "title": "LLM Input/Output Process",
+      "type": "subnode"
+    },
+    {
+      "id": "node_35",
+      "title": "Purpose of LLMs",
+      "type": "subnode"
+    },
+    {
+      "id": "node_36",
+      "title": "Challenge of Language",
+      "type": "subnode"
+    },
+    {
+      "id": "node_37",
+      "title": "From Transformers to Large Models",
+      "type": "subnode"
+    },
+    {
+      "id": "node_38",
+      "title": "Emergent Behaviors of LLMs",
+      "type": "central"
+    },
+    {
+      "id": "node_39",
+      "title": "Predictive Text Modeling",
+      "type": "subnode"
+    },
+    {
+      "id": "node_40",
+      "title": "Language Understanding",
+      "type": "subnode"
+    },
+    {
+      "id": "node_41",
+      "title": "Initial Applications",
+      "type": "subnode"
+    },
+    {
+      "id": "node_42",
+      "title": "Unexpected Capabilities",
+      "type": "subnode"
+    },
+    {
+      "id": "node_43",
+      "title": "In-context Learning",
+      "type": "subnode"
+    },
+    {
+      "id": "node_44",
+      "title": "Chain-of-thought Reasoning",
+      "type": "subnode"
+    },
+    {
+      "id": "node_45",
+      "title": "Code Generation",
+      "type": "subnode"
+    },
+    {
+      "id": "node_46",
+      "title": "Tool Use",
+      "type": "subnode"
+    },
+    {
+      "id": "node_47",
+      "title": "Theory of Mind",
+      "type": "subnode"
+    },
+    {
+      "id": "node_48",
+      "title": "Compositional Generalization",
+      "type": "subnode"
+    },
+    {
+      "id": "node_49",
+      "title": "Task Solving",
+      "type": "subnode"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_1",
+      "from": "node_1",
+      "to": "node_2",
+      "label": "course code"
+    },
+    {
+      "id": "edge_2",
+      "from": "node_1",
+      "to": "node_3",
+      "label": "focus on"
+    },
+    {
+      "id": "edge_3",
+      "from": "node_1",
+      "to": "node_5",
+      "label": "offered at"
+    },
+    {
+      "id": "edge_4",
+      "from": "node_1",
+      "to": "node_6",
+      "label": "semester"
+    },
+    {
+      "id": "edge_5",
+      "from": "node_1",
+      "to": "node_7",
+      "label": "includes"
+    },
+    {
+      "id": "edge_6",
+      "from": "node_7",
+      "to": "node_8",
+      "label": "step 1"
+    },
+    {
+      "id": "edge_7",
+      "from": "node_7",
+      "to": "node_9",
+      "label": "step 2"
+    },
+    {
+      "id": "edge_8",
+      "from": "node_7",
+      "to": "node_10",
+      "label": "step 3"
+    },
+    {
+      "id": "edge_9",
+      "from": "node_7",
+      "to": "node_11",
+      "label": "step 4"
+    },
+    {
+      "id": "edge_10",
+      "from": "node_7",
+      "to": "node_12",
+      "label": "step 5"
+    },
+    {
+      "id": "edge_11",
+      "from": "node_7",
+      "to": "node_13",
+      "label": "step 6"
+    },
+    {
+      "id": "edge_12",
+      "from": "node_3",
+      "to": "node_4",
+      "label": "includes"
+    },
+    {
+      "id": "edge_13",
+      "from": "node_9",
+      "to": "node_4",
+      "label": "focus on"
+    },
+    {
+      "id": "edge_14",
+      "from": "node_14",
+      "to": "node_15",
+      "label": "includes"
+    },
+    {
+      "id": "edge_15",
+      "from": "node_14",
+      "to": "node_16",
+      "label": "includes"
+    },
+    {
+      "id": "edge_16",
+      "from": "node_14",
+      "to": "node_17",
+      "label": "includes"
+    },
+    {
+      "id": "edge_17",
+      "from": "node_14",
+      "to": "node_18",
+      "label": "includes"
+    },
+    {
+      "id": "edge_18",
+      "from": "node_15",
+      "to": "node_3",
+      "label": "related to"
+    },
+    {
+      "id": "edge_19",
+      "from": "node_16",
+      "to": "node_1",
+      "label": "feedback on"
+    },
+    {
+      "id": "edge_20",
+      "from": "node_17",
+      "to": "node_7",
+      "label": "affects"
+    },
+    {
+      "id": "edge_21",
+      "from": "node_18",
+      "to": "node_1",
+      "label": "concerns"
+    },
+    {
+      "id": "edge_22",
+      "from": "node_19",
+      "to": "node_20",
+      "label": "includes"
+    },
+    {
+      "id": "edge_23",
+      "from": "node_19",
+      "to": "node_21",
+      "label": "includes"
+    },
+    {
+      "id": "edge_24",
+      "from": "node_19",
+      "to": "node_22",
+      "label": "includes"
+    },
+    {
+      "id": "edge_25",
+      "from": "node_19",
+      "to": "node_23",
+      "label": "includes"
+    },
+    {
+      "id": "edge_26",
+      "from": "node_19",
+      "to": "node_24",
+      "label": "includes"
+    },
+    {
+      "id": "edge_27",
+      "from": "node_19",
+      "to": "node_25",
+      "label": "includes"
+    },
+    {
+      "id": "edge_28",
+      "from": "node_19",
+      "to": "node_26",
+      "label": "includes"
+    },
+    {
+      "id": "edge_29",
+      "from": "node_19",
+      "to": "node_27",
+      "label": "includes"
+    },
+    {
+      "id": "edge_30",
+      "from": "node_20",
+      "to": "node_28",
+      "label": "evolution from"
+    },
+    {
+      "id": "edge_31",
+      "from": "node_28",
+      "to": "node_29",
+      "label": "led to"
+    },
+    {
+      "id": "edge_32",
+      "from": "node_29",
+      "to": "node_30",
+      "label": "enabled"
+    },
+    {
+      "id": "edge_33",
+      "from": "node_30",
+      "to": "node_31",
+      "label": "preceded"
+    },
+    {
+      "id": "edge_34",
+      "from": "node_31",
+      "to": "node_32",
+      "label": "led to"
+    },
+    {
+      "id": "edge_35",
+      "from": "node_19",
+      "to": "node_33",
+      "label": "explains"
+    },
+    {
+      "id": "edge_36",
+      "from": "node_19",
+      "to": "node_34",
+      "label": "process"
+    },
+    {
+      "id": "edge_37",
+      "from": "node_19",
+      "to": "node_35",
+      "label": "purpose"
+    },
+    {
+      "id": "edge_38",
+      "from": "node_19",
+      "to": "node_36",
+      "label": "challenges"
+    },
+    {
+      "id": "edge_39",
+      "from": "node_19",
+      "to": "node_37",
+      "label": "transition"
+    },
+    {
+      "id": "edge_40",
+      "from": "node_4",
+      "to": "node_19",
+      "label": "introduction to"
+    },
+    {
+      "id": "edge_41",
+      "from": "node_38",
+      "to": "node_39",
+      "label": "includes"
+    },
+    {
+      "id": "edge_42",
+      "from": "node_38",
+      "to": "node_40",
+      "label": "includes"
+    },
+    {
+      "id": "edge_43",
+      "from": "node_38",
+      "to": "node_41",
+      "label": "includes"
+    },
+    {
+      "id": "edge_44",
+      "from": "node_38",
+      "to": "node_42",
+      "label": "includes"
+    },
+    {
+      "id": "edge_45",
+      "from": "node_38",
+      "to": "node_43",
+      "label": "includes"
+    },
+    {
+      "id": "edge_46",
+      "from": "node_38",
+      "to": "node_44",
+      "label": "includes"
+    },
+    {
+      "id": "edge_47",
+      "from": "node_38",
+      "to": "node_45",
+      "label": "includes"
+    },
+    {
+      "id": "edge_48",
+      "from": "node_38",
+      "to": "node_46",
+      "label": "includes"
+    },
+    {
+      "id": "edge_49",
+      "from": "node_38",
+      "to": "node_47",
+      "label": "includes"
+    },
+    {
+      "id": "edge_50",
+      "from": "node_38",
+      "to": "node_48",
+      "label": "includes"
+    },
+    {
+      "id": "edge_51",
+      "from": "node_38",
+      "to": "node_49",
+      "label": "includes"
+    },
+    {
+      "id": "edge_52",
+      "from": "node_22",
+      "to": "node_38",
+      "label": "detailed in"
+    },
+    {
+      "id": "edge_53",
+      "from": "node_19",
+      "to": "node_38",
+      "label": "explores"
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "metadata": {
+    "thread_id": "session_43e636eb",
+    "created_at": "2025-10-04T20:15:16.058448",
+    "source_file": "uploads\\20251004_201401_Slide Template.pdf",
+    "total_pages": 5,
+    "total_topics": 4,
+    "graph_nodes": 21,
+    "graph_edges": 25
+  },
+  "processing_results": {
+    "page_summaries": [
+      {
+        "page_number": 1,
+        "summary": "- **Name**: Mohamad Bazzi\n- **Position**: AI Research Intern\n- **Institution**: The University of British Columbia\n- **Visuals**:\n  - Image of UBC campus\n  - UBC sign\n\nThe slide highlights Mohamad Bazzi's role and affiliation with UBC, supported by campus imagery."
+      },
+      {
+        "page_number": 2,
+        "summary": "**AI Research Internship Process**\n\n- **CV & SOP (01):** Prepare curriculum vitae and statement of purpose.\n- **Cold-Emailing (02):** Reach out to potential mentors or institutions.\n- **Interview (03):** Participate in interviews for selection.\n- **Visa & Travelling (04):** Arrange necessary travel documents and plans.\n\n**Context:** Mohamad Bazzi, AI Research Intern at The University of British Columbia."
+      },
+      {
+        "page_number": 3,
+        "summary": "**Mohamad Bazzi - AI Research Intern**\n\n- **Personal Branding:**\n  - Importance of having a personal website.\n  - Website showcases professional profile and experience.\n\n- **Professional Tools:**\n  - Efficient cold emailing strategies highlighted.\n\n- **Affiliation:**\n  - Associated with The University of British Columbia."
+      },
+      {
+        "page_number": 4,
+        "summary": "**Research Interview Tips**\n\n- **Preparation:**\n  - Always bring slides to the interview.\n\n- **Presentation:**\n  - Introduce yourself and highlight previous work.\n\n- **Content:**\n  - Choose a topic of interest, but avoid overextending.\n\n**Visual Element:**\n- Image with text: \"Why should we hire you?\" indicating the importance of self-presentation."
+      },
+      {
+        "page_number": 5,
+        "summary": "- **Name & Role**: Mohamad Bazzi, AI Research Intern at The University of British Columbia.\n- **Topic**: Visa interviews and rejections.\n- **Visuals**: \n  - Left image: Person standing in a desolate area, possibly indicating disappointment or reflection.\n  - Right image: Person with headphones, holding a coffee, in front of a computer screen displaying a document, possibly related to visa application.\n- **Theme**: Challenges and experiences related to visa processes."
+      }
+    ],
+    "topics": {
+      "topic_names": [
+        "Introduction and Personal Branding",
+        "AI Research Internship Process",
+        "Interview and Presentation Strategies",
+        "Visa Challenges and Experiences"
+      ],
+      "topic_details": [
+        {
+          "topic_title": "Introduction and Personal Branding",
+          "slide_numbers": [
+            1,
+            3
+          ],
+          "summaries": [
+            "The slide highlights Mohamad Bazzi's role and affiliation with UBC, supported by campus imagery.",
+            "Personal Branding: Importance of having a personal website. Website showcases professional profile and experience. Professional Tools: Efficient cold emailing strategies highlighted. Affiliation: Associated with The University of British Columbia."
+          ]
+        },
+        {
+          "topic_title": "AI Research Internship Process",
+          "slide_numbers": [
+            2
+          ],
+          "summaries": [
+            "AI Research Internship Process: CV & SOP (01): Prepare curriculum vitae and statement of purpose. Cold-Emailing (02): Reach out to potential mentors or institutions. Interview (03): Participate in interviews for selection. Visa & Travelling (04): Arrange necessary travel documents and plans. Context: Mohamad Bazzi, AI Research Intern at The University of British Columbia."
+          ]
+        },
+        {
+          "topic_title": "Interview and Presentation Strategies",
+          "slide_numbers": [
+            4
+          ],
+          "summaries": [
+            "Research Interview Tips: Preparation: Always bring slides to the interview. Presentation: Introduce yourself and highlight previous work. Content: Choose a topic of interest, but avoid overextending. Visual Element: Image with text: 'Why should we hire you?' indicating the importance of self-presentation."
+          ]
+        },
+        {
+          "topic_title": "Visa Challenges and Experiences",
+          "slide_numbers": [
+            5
+          ],
+          "summaries": [
+            "Name & Role: Mohamad Bazzi, AI Research Intern at The University of British Columbia. Topic: Visa interviews and rejections. Visuals: Left image: Person standing in a desolate area, possibly indicating disappointment or reflection. Right image: Person with headphones, holding a coffee, in front of a computer screen displaying a document, possibly related to visa application. Theme: Challenges and experiences related to visa processes."
+          ]
+        }
+      ]
+    },
+    "final_graph": {
+      "nodes": [
+        {
+          "id": "node_1",
+          "title": "Introduction and Personal Branding",
+          "type": "central"
+        },
+        {
+          "id": "node_2",
+          "title": "Mohamad Bazzi",
+          "type": "subnode"
+        },
+        {
+          "id": "node_3",
+          "title": "UBC Affiliation",
+          "type": "subnode"
+        },
+        {
+          "id": "node_4",
+          "title": "Personal Website",
+          "type": "subnode"
+        },
+        {
+          "id": "node_5",
+          "title": "Professional Profile",
+          "type": "subnode"
+        },
+        {
+          "id": "node_6",
+          "title": "Experience Showcase",
+          "type": "subnode"
+        },
+        {
+          "id": "node_7",
+          "title": "Cold Emailing",
+          "type": "subnode"
+        },
+        {
+          "id": "node_8",
+          "title": "AI Research Internship Process",
+          "type": "central"
+        },
+        {
+          "id": "node_9",
+          "title": "CV & SOP",
+          "type": "subnode"
+        },
+        {
+          "id": "node_10",
+          "title": "Interview",
+          "type": "subnode"
+        },
+        {
+          "id": "node_11",
+          "title": "Visa & Travelling",
+          "type": "subnode"
+        },
+        {
+          "id": "node_12",
+          "title": "Interview and Presentation Strategies",
+          "type": "central"
+        },
+        {
+          "id": "node_13",
+          "title": "Preparation",
+          "type": "subnode"
+        },
+        {
+          "id": "node_14",
+          "title": "Presentation",
+          "type": "subnode"
+        },
+        {
+          "id": "node_15",
+          "title": "Content Selection",
+          "type": "subnode"
+        },
+        {
+          "id": "node_16",
+          "title": "Visual Element",
+          "type": "subnode"
+        },
+        {
+          "id": "node_17",
+          "title": "Visa Challenges and Experiences",
+          "type": "central"
+        },
+        {
+          "id": "node_18",
+          "title": "Visa Interviews",
+          "type": "subnode"
+        },
+        {
+          "id": "node_19",
+          "title": "Visa Rejections",
+          "type": "subnode"
+        },
+        {
+          "id": "node_20",
+          "title": "Emotional Impact",
+          "type": "subnode"
+        },
+        {
+          "id": "node_21",
+          "title": "Application Process",
+          "type": "subnode"
+        }
+      ],
+      "edges": [
+        {
+          "id": "edge_1",
+          "from": "node_1",
+          "to": "node_2",
+          "label": "highlights"
+        },
+        {
+          "id": "edge_2",
+          "from": "node_2",
+          "to": "node_3",
+          "label": "affiliated with"
+        },
+        {
+          "id": "edge_3",
+          "from": "node_1",
+          "to": "node_4",
+          "label": "importance of"
+        },
+        {
+          "id": "edge_4",
+          "from": "node_4",
+          "to": "node_5",
+          "label": "showcases"
+        },
+        {
+          "id": "edge_5",
+          "from": "node_4",
+          "to": "node_6",
+          "label": "includes"
+        },
+        {
+          "id": "edge_6",
+          "from": "node_1",
+          "to": "node_7",
+          "label": "tools include"
+        },
+        {
+          "id": "edge_7",
+          "from": "node_8",
+          "to": "node_9",
+          "label": "includes"
+        },
+        {
+          "id": "edge_8",
+          "from": "node_8",
+          "to": "node_7",
+          "label": "involves"
+        },
+        {
+          "id": "edge_9",
+          "from": "node_8",
+          "to": "node_10",
+          "label": "includes"
+        },
+        {
+          "id": "edge_10",
+          "from": "node_8",
+          "to": "node_11",
+          "label": "includes"
+        },
+        {
+          "id": "edge_11",
+          "from": "node_2",
+          "to": "node_8",
+          "label": "participated in"
+        },
+        {
+          "id": "edge_12",
+          "from": "node_12",
+          "to": "node_13",
+          "label": "includes"
+        },
+        {
+          "id": "edge_13",
+          "from": "node_12",
+          "to": "node_14",
+          "label": "includes"
+        },
+        {
+          "id": "edge_14",
+          "from": "node_12",
+          "to": "node_15",
+          "label": "includes"
+        },
+        {
+          "id": "edge_15",
+          "from": "node_12",
+          "to": "node_16",
+          "label": "includes"
+        },
+        {
+          "id": "edge_16",
+          "from": "node_13",
+          "to": "node_10",
+          "label": "prepares for"
+        },
+        {
+          "id": "edge_17",
+          "from": "node_14",
+          "to": "node_6",
+          "label": "highlights"
+        },
+        {
+          "id": "edge_18",
+          "from": "node_15",
+          "to": "node_9",
+          "label": "aligns with"
+        },
+        {
+          "id": "edge_19",
+          "from": "node_16",
+          "to": "node_5",
+          "label": "enhances"
+        },
+        {
+          "id": "edge_20",
+          "from": "node_17",
+          "to": "node_18",
+          "label": "includes"
+        },
+        {
+          "id": "edge_21",
+          "from": "node_17",
+          "to": "node_19",
+          "label": "includes"
+        },
+        {
+          "id": "edge_22",
+          "from": "node_17",
+          "to": "node_20",
+          "label": "includes"
+        },
+        {
+          "id": "edge_23",
+          "from": "node_17",
+          "to": "node_21",
+          "label": "includes"
+        },
+        {
+          "id": "edge_24",
+          "from": "node_11",
+          "to": "node_17",
+          "label": "related to"
+        },
+        {
+          "id": "edge_25",
+          "from": "node_2",
+          "to": "node_17",
+          "label": "experienced by"
+        }
+      ]
+    },
+    "graph_building_complete": true
+  }
+}

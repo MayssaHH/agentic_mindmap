@@ -122,11 +122,23 @@ class UploadComponent {
     async handleUpload() {
         if (!this.selectedFile) return;
 
+        // Reset to default config values first
+        apiService.setBaseURL(CONFIG.API_BASE_URL);
+        let endpoint = CONFIG.API_ENDPOINTS.UPLOAD_PDF;
+
+        // Only override if custom URL is provided and non-empty
         const customEndpoint = this.elements.apiUrl?.value.trim();
-        if (customEndpoint) {
-            // Extract base URL and endpoint
-            const url = new URL(customEndpoint);
-            apiService.setBaseURL(url.origin);
+        if (customEndpoint && customEndpoint.length > 0) {
+            try {
+                // Parse the full URL
+                const url = new URL(customEndpoint);
+                apiService.setBaseURL(url.origin);
+                endpoint = url.pathname;
+            } catch (error) {
+                console.error('Invalid custom URL:', error);
+                this.showResponse('error', '❌ Invalid URL', 'Please enter a valid URL or leave empty to use default');
+                return;
+            }
         }
 
         disableElement(this.elements.uploadBtn);
@@ -135,10 +147,8 @@ class UploadComponent {
         this.hideResponse();
 
         try {
-            const result = await apiService.uploadPDF(
-                this.selectedFile,
-                customEndpoint ? new URL(customEndpoint).pathname : undefined
-            );
+            console.log('Sending request to:', apiService.baseURL + endpoint);
+            const result = await apiService.uploadPDF(this.selectedFile, endpoint);
 
             if (result.success) {
                 this.showResponse(
@@ -154,6 +164,7 @@ class UploadComponent {
                 this.showResponse('error', '❌ Upload Failed', errorMessage);
             }
         } catch (error) {
+            console.error('Upload error:', error);
             this.showResponse('error', '❌ Unexpected Error', error.message);
         } finally {
             hideElement(this.elements.loader);

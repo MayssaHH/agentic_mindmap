@@ -224,7 +224,6 @@ async def extract_Topics_From_Summaries(state: userState) -> userState:
                     topic_entry = {
                         'topic_title': topic['topic_title'],
                         'slide_numbers': topic['slide_numbers'],
-                        'slides_range': topic['slides_range'],
                         'summaries': topic['summaries']  # This contains the summaries for this topic
                     }
                     pages_topics.append(topic_entry)
@@ -248,7 +247,6 @@ async def extract_Topics_From_Summaries(state: userState) -> userState:
                 state['pages_topics'] = [{
                     'topic_title': "Main Content",
                     'slide_numbers': [ps['page_number'] for ps in page_summaries],
-                    'slides_range': f"1-{len(page_summaries)}",
                     'summaries': [ps['summary'] for ps in page_summaries]
                 }]
                 state['nb_topics'] = 1

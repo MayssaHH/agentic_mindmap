@@ -1,0 +1,630 @@
+{
+  "metadata": {
+    "thread_id": "session_72368f78",
+    "created_at": "2025-10-04T20:21:53.618680",
+    "source_file": "uploads\\20251004_201633_C2+-+Large+Language+Models-1-20.pdf",
+    "total_pages": 20,
+    "total_topics": 3,
+    "graph_nodes": 40,
+    "graph_edges": 43
+  },
+  "processing_results": {
+    "page_summaries": [
+      {
+        "page_number": 1,
+        "summary": "- **Course Title**: EECE 503P/798S: Agentic Systems\n- **Topic**: C2 - Large Language Models\n- **Institution**: American University of Beirut\n- **Semester**: Fall 2025\n\nThis slide introduces a lecture or module focused on large language models within the context of agentic systems."
+      },
+      {
+        "page_number": 2,
+        "summary": "**Course Feedback Summary**\n\n- **Project and Assignment Challenges**\n  - Difficulty in generating innovative project ideas.\n  - First assignment perceived as too theoretical and misaligned with class explanations.\n\n- **Pace and Complexity of Material**\n  - Instructor to provide introduction and conclusion.\n  - Fast pace and non-intuitive concepts require multiple reviews.\n  - Students without strong AI background struggle more.\n\n- **Uncertainty Around Structure & Expectations**\n  - Confusion about exam structure and project initiation during early concept introduction."
+      },
+      {
+        "page_number": 3,
+        "summary": "- **LLMs Definition & Evolution**: Understand LLMs and their development from earlier AI.\n- **Model Size**: Identify factors making a model \"large\" (parameters, data, compute).\n- **Emergent Behaviors**: Explore behaviors beyond text prediction.\n- **Prompting Techniques**: Learn techniques like zero-shot, few-shot, CoT, multi-step.\n- **Architectures**: Compare different LLM architectures (encoder, decoder, MoE, multimodal).\n- **Advancements**: Review recent advancements (context windows, scaling laws, reasoning).\n- **Fine-tuning & Evaluation**: Introduce methods like instruction tuning, RLHF, DPO.\n- **Open vs. Closed Source**: Distinguish between open- and closed-source LLMs, highlight Hugging Face."
+      },
+      {
+        "page_number": 4,
+        "summary": "**Course Timeline Overview:**\n\n1. **Introduction to Generative AI**\n2. **Deep Dive to LLMs** *(Current Focus)*\n3. **Introduction to Agents**\n4. **Deep Dive into Agent Components**\n5. **Deep Dive into Agent Architectures**\n6. **Evaluation and Scalability of Agent Systems**\n\n**Context:**\n- Course: EECE 503P/798S: Agentic Systems\n- Institution: American University of Beirut\n\n**Visual Structure:**\n- Pyramid format indicating progression through topics."
+      },
+      {
+        "page_number": 5,
+        "summary": "- **Title**: Introduction\n- **Course**: EECE 503P/798S: Agentic Systems\n- **Institution**: American University of Beirut\n\nThis slide serves as an introductory page for a lecture or presentation on agentic systems, part of a course at the American University of Beirut."
+      },
+      {
+        "page_number": 6,
+        "summary": "**Evolution of Generative AI Models**\n\n1. **Early Foundations**\n   - Markov chains in early 20th century laid groundwork for probabilistic models.\n\n2. **Deep Learning Rise**\n   - Late 2000s breakthroughs enabled complex pattern recognition.\n\n3. **VAEs/GANs (2014)**\n   - Introduced powerful generative techniques for images and beyond.\n\n4. **Transformer (2017)**\n   - Revolutionized natural language understanding and generation.\n\n5. **LLMs (2022)**\n   - OpenAI's release sparked rapid innovation and widespread adoption."
+      },
+      {
+        "page_number": 7,
+        "summary": "- **Title**: From Transformers to LLMs\n- **Context**: Part of a course on Agentic Systems (EECE 503P/798S)\n- **Institution**: American University of Beirut\n- **Focus**: Transition and development from Transformer models to Large Language Models (LLMs)"
+      },
+      {
+        "page_number": 8,
+        "summary": "**What are LLMs?**\n\n- **Definition**: Neural networks trained on massive text corpora to model language distribution.\n- **Capabilities**: \n  - Text generation\n  - Translation\n  - Summarization\n  - Question answering\n- **Structure**: Not all LLMs are transformer-based; variations exist.\n- **Visual**: Diagram illustrating tasks from basic language modeling to complex applications like question answering."
+      },
+      {
+        "page_number": 9,
+        "summary": "**What Makes a Language Model \"Large\"?**\n\n- **Basic Structure**: A language model consists of an encoder and a decoder block.\n- **Large Language Model**: \n  - Formed by stacking hundreds of encoder and decoder blocks.\n  - Contains millions to billions of training parameters.\n- **LLM Architecture Pyramid**:\n  - **Base**: Deep Learning Foundation (parameter count).\n  - **Middle**: Parameter Scale (ranges from millions to billions).\n  - **Top**: Training Data (trained on vast text datasets).\n  - **Peak**: Text Generation (outputs human-like text)."
+      },
+      {
+        "page_number": 10,
+        "summary": "**LLM Input and Output Process**\n\n- **Input Text**: Initial data fed into the system.\n- **Tokenization**: Converts input text into tokens.\n- **Embedding**: Transforms tokens into numerical vectors.\n- **LLM Core**: Utilizes attention and multi-layer perceptron layers to process embeddings.\n- **Probability Map**: Generates probabilities for next token predictions.\n- **Token Decoding**: Converts probabilities back into text tokens.\n- **Output Text**: Produced text, loop continues if not end token.\n- **End Token**: Marks completion of output generation.\n\nThis flow illustrates the sequential processing in a language model from input to output."
+      },
+      {
+        "page_number": 11,
+        "summary": "- **Topic**: Purpose of LLMs (Large Language Models)\n- **Question**: Why were LLMs created?\n- **Context**: Part of a lecture on Agentic Systems\n- **Institution**: American University of Beirut\n\nThis slide introduces a discussion on the reasons behind the creation of Large Language Models."
+      },
+      {
+        "page_number": 12,
+        "summary": "**Language Representation Summary**\n\n- **Challenge**: Language is difficult for computers due to its unstructured nature.\n- **Meaning Loss**: Text loses meaning when reduced to binary (zeros and ones).\n- **AI Focus**: Historically, Language AI aims to structure language for easier processing.\n- **Process Overview**:\n  - **Input**: Unstructured text data.\n  - **AI Processing**: Converts text into structured forms.\n  - **Outputs**:\n    - **Text Output**: Generative modeling.\n    - **Embeddings**: Numeric representations.\n    - **Classification**: Identifying targets."
+      },
+      {
+        "page_number": 13,
+        "summary": "**From Transformers to Large Models**\n\n- **Objective**: Develop a text model efficient in diverse tasks (e.g., answering questions, creative writing, coding, multi-language generation).\n- **Key Requirements**:\n  - **Information Capacity**: Model must hold extensive information within its weights.\n  - **Parameters**: A large number of parameters is essential to store vast information.\n- **Components**:\n  - **Transformers**: Facilitate understanding of text connections via attention.\n  - **Attention Mechanism**: Enhances text understanding and processing.\n  - **Large Parameters**: Enable models to retain extensive information.\n\n**Goal**: Achieve an efficient text model through these elements."
+      },
+      {
+        "page_number": 14,
+        "summary": "- **Topic**: Emergent Behaviors of Large Language Models (LLMs)\n- **Original Purpose**: \n  - **High Accuracy**: Perform traditional text tasks.\n  - **Predictive Text Modeling**: Trained to predict the next word.\n  - **Language Understanding**: Capture patterns based on context.\n  - **Initial Applications**: Autocomplete, translation, classification, summarization."
+      },
+      {
+        "page_number": 15,
+        "summary": "**Emergent Behaviors of LLMs**\n\n- **Unexpected Capabilities**: LLMs, trained to predict text, have developed advanced abilities.\n- **Hierarchical Skills**:\n  - **In-context Learning**: Foundation for other skills.\n  - **Chain-of-thought Reasoning**: Logical progression in tasks.\n  - **Code Generation**: Ability to write code.\n  - **Tool Use**: Utilizing tools effectively.\n  - **Theory of Mind**: Understanding perspectives.\n  - **Compositional Generalization**: Creating new ideas from known concepts.\n- **Task Solving**: Achieved through prompts, not gradient updates."
+      },
+      {
+        "page_number": 16,
+        "summary": "**Emergent Behaviors of LLMs**\n\n- **In-context Learning**: Foundation of LLM capabilities.\n- **Chain-of-thought Reasoning**: Builds on in-context learning for logical processing.\n- **Code Generation**: Ability to produce code from prompts.\n- **Tool Use**: Utilization of external tools for enhanced functionality.\n- **Theory of Mind**: Understanding and predicting others' thoughts.\n- **Compositional Generalization**: Combining learned concepts in novel ways.\n\n**Key Insight**: Step-by-step logic emerges with correct prompting."
+      },
+      {
+        "page_number": 17,
+        "summary": "**Emergent Behaviors of LLMs**\n\n- **In-context Learning**: Foundation of LLM capabilities.\n- **Chain-of-thought Reasoning**: Logical progression in responses.\n- **Code Generation**: Ability to write syntactically correct and functional code.\n- **Tool Use**: Utilizing external tools effectively.\n- **Theory of Mind**: Understanding and predicting others' thoughts.\n- **Compositional Generalization**: Creating new ideas from known concepts.\n\n**Key Insight**: LLMs exhibit complex behaviors, building from basic learning to advanced reasoning and creativity."
+      },
+      {
+        "page_number": 18,
+        "summary": "**Emergent Behaviors of LLMs**\n\n- **In-context Learning**: Foundation of LLM capabilities.\n- **Chain-of-thought Reasoning**: Logical progression in problem-solving.\n- **Code Generation**: Ability to create and understand code.\n- **Tool Use**: Utilizing external tools like APIs, calculators, and browsers.\n- **Theory of Mind**: Understanding and predicting others' thoughts.\n- **Compositional Generalization**: Combining known concepts to form new ideas.\n\n**Note**: Visualized as a pyramid, indicating a hierarchy of complexity."
+      },
+      {
+        "page_number": 19,
+        "summary": "**Emergent Behaviors of LLMs**\n\n- **In-context Learning**: Foundation of LLM capabilities.\n- **Chain-of-thought Reasoning**: Logical progression in problem-solving.\n- **Code Generation**: Ability to produce code.\n- **Tool Use**: Utilizing external tools effectively.\n- **Theory of Mind**: Inferring others' beliefs or knowledge.\n- **Compositional Generalization**: Advanced understanding and application of concepts.\n\nThese behaviors illustrate the progressive capabilities of large language models (LLMs), with benchmarks showing their ability to infer beliefs or knowledge."
+      },
+      {
+        "page_number": 20,
+        "summary": "**Emergent Behaviors of LLMs**\n\n- **In-context Learning**: Foundation of learning from context.\n- **Chain-of-thought Reasoning**: Logical progression in reasoning.\n- **Code Generation**: Ability to create code.\n- **Tool Use**: Utilizing tools effectively.\n- **Theory of Mind**: Understanding others' perspectives.\n- **Compositional Generalization**: Combining learned patterns innovatively.\n\n**Key Concept**: Solving tasks by integrating learned patterns in novel ways."
+      }
+    ],
+    "topics": {
+      "topic_names": [
+        "Course Introduction and Structure",
+        "Introduction to Large Language Models (LLMs)",
+        "Emergent Behaviors of Large Language Models"
+      ],
+      "topic_details": [
+        {
+          "topic_title": "Course Introduction and Structure",
+          "slide_numbers": [
+            1,
+            2,
+            4,
+            5
+          ],
+          "summaries": [
+            "Course Title: EECE 503P/798S: Agentic Systems - Topic: C2 - Large Language Models - Institution: American University of Beirut - Semester: Fall 2025. This slide introduces a lecture or module focused on large language models within the context of agentic systems.",
+            "Course Feedback Summary - Project and Assignment Challenges: Difficulty in generating innovative project ideas. First assignment perceived as too theoretical and misaligned with class explanations. Pace and Complexity of Material: Instructor to provide introduction and conclusion. Fast pace and non-intuitive concepts require multiple reviews. Students without strong AI background struggle more. Uncertainty Around Structure & Expectations: Confusion about exam structure and project initiation during early concept introduction.",
+            "Course Timeline Overview: 1. Introduction to Generative AI 2. Deep Dive to LLMs (Current Focus) 3. Introduction to Agents 4. Deep Dive into Agent Components 5. Deep Dive into Agent Architectures 6. Evaluation and Scalability of Agent Systems. Context: Course: EECE 503P/798S: Agentic Systems - Institution: American University of Beirut. Visual Structure: Pyramid format indicating progression through topics.",
+            "Title: Introduction - Course: EECE 503P/798S: Agentic Systems - Institution: American University of Beirut. This slide serves as an introductory page for a lecture or presentation on agentic systems, part of a course at the American University of Beirut."
+          ]
+        },
+        {
+          "topic_title": "Introduction to Large Language Models (LLMs)",
+          "slide_numbers": [
+            3,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "summaries": [
+            "LLMs Definition & Evolution: Understand LLMs and their development from earlier AI. Model Size: Identify factors making a model 'large' (parameters, data, compute). Emergent Behaviors: Explore behaviors beyond text prediction. Prompting Techniques: Learn techniques like zero-shot, few-shot, CoT, multi-step. Architectures: Compare different LLM architectures (encoder, decoder, MoE, multimodal). Advancements: Review recent advancements (context windows, scaling laws, reasoning). Fine-tuning & Evaluation: Introduce methods like instruction tuning, RLHF, DPO. Open vs. Closed Source: Distinguish between open- and closed-source LLMs, highlight Hugging Face.",
+            "Evolution of Generative AI Models - Early Foundations: Markov chains in early 20th century laid groundwork for probabilistic models. Deep Learning Rise: Late 2000s breakthroughs enabled complex pattern recognition. VAEs/GANs (2014): Introduced powerful generative techniques for images and beyond. Transformer (2017): Revolutionized natural language understanding and generation. LLMs (2022): OpenAI's release sparked rapid innovation and widespread adoption.",
+            "Title: From Transformers to LLMs - Context: Part of a course on Agentic Systems (EECE 503P/798S) - Institution: American University of Beirut - Focus: Transition and development from Transformer models to Large Language Models (LLMs)",
+            "What are LLMs? - Definition: Neural networks trained on massive text corpora to model language distribution. Capabilities: Text generation, Translation, Summarization, Question answering. Structure: Not all LLMs are transformer-based; variations exist. Visual: Diagram illustrating tasks from basic language modeling to complex applications like question answering.",
+            "What Makes a Language Model 'Large'? - Basic Structure: A language model consists of an encoder and a decoder block. Large Language Model: Formed by stacking hundreds of encoder and decoder blocks. Contains millions to billions of training parameters. LLM Architecture Pyramid: Base: Deep Learning Foundation (parameter count). Middle: Parameter Scale (ranges from millions to billions). Top: Training Data (trained on vast text datasets). Peak: Text Generation (outputs human-like text).",
+            "LLM Input and Output Process - Input Text: Initial data fed into the system. Tokenization: Converts input text into tokens. Embedding: Transforms tokens into numerical vectors. LLM Core: Utilizes attention and multi-layer perceptron layers to process embeddings. Probability Map: Generates probabilities for next token predictions. Token Decoding: Converts probabilities back into text tokens. Output Text: Produced text, loop continues if not end token. End Token: Marks completion of output generation. This flow illustrates the sequential processing in a language model from input to output.",
+            "Topic: Purpose of LLMs (Large Language Models) - Question: Why were LLMs created? Context: Part of a lecture on Agentic Systems - Institution: American University of Beirut. This slide introduces a discussion on the reasons behind the creation of Large Language Models.",
+            "Language Representation Summary - Challenge: Language is difficult for computers due to its unstructured nature. Meaning Loss: Text loses meaning when reduced to binary (zeros and ones). AI Focus: Historically, Language AI aims to structure language for easier processing. Process Overview: Input: Unstructured text data. AI Processing: Converts text into structured forms. Outputs: Text Output: Generative modeling. Embeddings: Numeric representations. Classification: Identifying targets.",
+            "From Transformers to Large Models - Objective: Develop a text model efficient in diverse tasks (e.g., answering questions, creative writing, coding, multi-language generation). Key Requirements: Information Capacity: Model must hold extensive information within its weights. Parameters: A large number of parameters is essential to store vast information. Components: Transformers: Facilitate understanding of text connections via attention. Attention Mechanism: Enhances text understanding and processing. Large Parameters: Enable models to retain extensive information. Goal: Achieve an efficient text model through these elements."
+          ]
+        },
+        {
+          "topic_title": "Emergent Behaviors of Large Language Models",
+          "slide_numbers": [
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "summaries": [
+            "Topic: Emergent Behaviors of Large Language Models (LLMs) - Original Purpose: High Accuracy: Perform traditional text tasks. Predictive Text Modeling: Trained to predict the next word. Language Understanding: Capture patterns based on context. Initial Applications: Autocomplete, translation, classification, summarization.",
+            "Emergent Behaviors of LLMs - Unexpected Capabilities: LLMs, trained to predict text, have developed advanced abilities. Hierarchical Skills: In-context Learning: Foundation for other skills. Chain-of-thought Reasoning: Logical progression in tasks. Code Generation: Ability to write code. Tool Use: Utilizing tools effectively. Theory of Mind: Understanding perspectives. Compositional Generalization: Creating new ideas from known concepts. Task Solving: Achieved through prompts, not gradient updates.",
+            "Emergent Behaviors of LLMs - In-context Learning: Foundation of LLM capabilities. Chain-of-thought Reasoning: Builds on in-context learning for logical processing. Code Generation: Ability to produce code from prompts. Tool Use: Utilization of external tools for enhanced functionality. Theory of Mind: Understanding and predicting others' thoughts. Compositional Generalization: Combining learned concepts in novel ways. Key Insight: Step-by-step logic emerges with correct prompting.",
+            "Emergent Behaviors of LLMs - In-context Learning: Foundation of LLM capabilities. Chain-of-thought Reasoning: Logical progression in responses. Code Generation: Ability to write syntactically correct and functional code. Tool Use: Utilizing external tools effectively. Theory of Mind: Understanding and predicting others' thoughts. Compositional Generalization: Creating new ideas from known concepts. Key Insight: LLMs exhibit complex behaviors, building from basic learning to advanced reasoning and creativity.",
+            "Emergent Behaviors of LLMs - In-context Learning: Foundation of LLM capabilities. Chain-of-thought Reasoning: Logical progression in problem-solving. Code Generation: Ability to create and understand code. Tool Use: Utilizing external tools like APIs, calculators, and browsers. Theory of Mind: Understanding and predicting others' thoughts. Compositional Generalization: Combining known concepts to form new ideas. Note: Visualized as a pyramid, indicating a hierarchy of complexity.",
+            "Emergent Behaviors of LLMs - In-context Learning: Foundation of LLM capabilities. Chain-of-thought Reasoning: Logical progression in problem-solving. Code Generation: Ability to produce code. Tool Use: Utilizing external tools effectively. Theory of Mind: Inferring others' beliefs or knowledge. Compositional Generalization: Advanced understanding and application of concepts. These behaviors illustrate the progressive capabilities of large language models (LLMs), with benchmarks showing their ability to infer beliefs or knowledge.",
+            "Emergent Behaviors of LLMs - In-context Learning: Foundation of learning from context. Chain-of-thought Reasoning: Logical progression in reasoning. Code Generation: Ability to create code. Tool Use: Utilizing tools effectively. Theory of Mind: Understanding others' perspectives. Compositional Generalization: Combining learned patterns innovatively. Key Concept: Solving tasks by integrating learned patterns in novel ways."
+          ]
+        }
+      ]
+    },
+    "final_graph": {
+      "nodes": [
+        {
+          "id": "node_1",
+          "title": "Course Introduction and Structure",
+          "type": "central"
+        },
+        {
+          "id": "node_2",
+          "title": "EECE 503P/798S",
+          "type": "subnode"
+        },
+        {
+          "id": "node_3",
+          "title": "Agentic Systems",
+          "type": "subnode"
+        },
+        {
+          "id": "node_4",
+          "title": "Large Language Models",
+          "type": "subnode"
+        },
+        {
+          "id": "node_5",
+          "title": "Course Feedback",
+          "type": "subnode"
+        },
+        {
+          "id": "node_6",
+          "title": "Project Challenges",
+          "type": "subnode"
+        },
+        {
+          "id": "node_7",
+          "title": "Assignment Challenges",
+          "type": "subnode"
+        },
+        {
+          "id": "node_8",
+          "title": "Pace and Complexity",
+          "type": "subnode"
+        },
+        {
+          "id": "node_9",
+          "title": "Structure & Expectations",
+          "type": "subnode"
+        },
+        {
+          "id": "node_10",
+          "title": "Course Timeline",
+          "type": "subnode"
+        },
+        {
+          "id": "node_11",
+          "title": "Generative AI",
+          "type": "subnode"
+        },
+        {
+          "id": "node_12",
+          "title": "Introduction to Agents",
+          "type": "subnode"
+        },
+        {
+          "id": "node_13",
+          "title": "Agent Components",
+          "type": "subnode"
+        },
+        {
+          "id": "node_14",
+          "title": "Agent Architectures",
+          "type": "subnode"
+        },
+        {
+          "id": "node_15",
+          "title": "Evaluation & Scalability",
+          "type": "subnode"
+        },
+        {
+          "id": "node_16",
+          "title": "Introduction to LLMs",
+          "type": "central"
+        },
+        {
+          "id": "node_17",
+          "title": "LLMs Definition & Evolution",
+          "type": "subnode"
+        },
+        {
+          "id": "node_18",
+          "title": "Model Size",
+          "type": "subnode"
+        },
+        {
+          "id": "node_19",
+          "title": "Emergent Behaviors",
+          "type": "subnode"
+        },
+        {
+          "id": "node_20",
+          "title": "Prompting Techniques",
+          "type": "subnode"
+        },
+        {
+          "id": "node_21",
+          "title": "LLM Architectures",
+          "type": "subnode"
+        },
+        {
+          "id": "node_22",
+          "title": "Advancements",
+          "type": "subnode"
+        },
+        {
+          "id": "node_23",
+          "title": "Fine-tuning & Evaluation",
+          "type": "subnode"
+        },
+        {
+          "id": "node_24",
+          "title": "Open vs. Closed Source",
+          "type": "subnode"
+        },
+        {
+          "id": "node_25",
+          "title": "Evolution of Generative AI",
+          "type": "subnode"
+        },
+        {
+          "id": "node_26",
+          "title": "What are LLMs?",
+          "type": "subnode"
+        },
+        {
+          "id": "node_27",
+          "title": "What Makes a Model 'Large'?",
+          "type": "subnode"
+        },
+        {
+          "id": "node_28",
+          "title": "LLM Input and Output",
+          "type": "subnode"
+        },
+        {
+          "id": "node_29",
+          "title": "Purpose of LLMs",
+          "type": "subnode"
+        },
+        {
+          "id": "node_30",
+          "title": "Language Representation",
+          "type": "subnode"
+        },
+        {
+          "id": "node_31",
+          "title": "From Transformers to LLMs",
+          "type": "subnode"
+        },
+        {
+          "id": "node_32",
+          "title": "Emergent Behaviors of LLMs",
+          "type": "central"
+        },
+        {
+          "id": "node_33",
+          "title": "Original Purpose",
+          "type": "subnode"
+        },
+        {
+          "id": "node_34",
+          "title": "Unexpected Capabilities",
+          "type": "subnode"
+        },
+        {
+          "id": "node_35",
+          "title": "In-context Learning",
+          "type": "subnode"
+        },
+        {
+          "id": "node_36",
+          "title": "Chain-of-thought Reasoning",
+          "type": "subnode"
+        },
+        {
+          "id": "node_37",
+          "title": "Code Generation",
+          "type": "subnode"
+        },
+        {
+          "id": "node_38",
+          "title": "Tool Use",
+          "type": "subnode"
+        },
+        {
+          "id": "node_39",
+          "title": "Theory of Mind",
+          "type": "subnode"
+        },
+        {
+          "id": "node_40",
+          "title": "Compositional Generalization",
+          "type": "subnode"
+        }
+      ],
+      "edges": [
+        {
+          "id": "edge_1",
+          "from": "node_1",
+          "to": "node_2",
+          "label": "course"
+        },
+        {
+          "id": "edge_2",
+          "from": "node_2",
+          "to": "node_3",
+          "label": "focus"
+        },
+        {
+          "id": "edge_3",
+          "from": "node_3",
+          "to": "node_4",
+          "label": "includes"
+        },
+        {
+          "id": "edge_4",
+          "from": "node_1",
+          "to": "node_5",
+          "label": "includes"
+        },
+        {
+          "id": "edge_5",
+          "from": "node_5",
+          "to": "node_6",
+          "label": "includes"
+        },
+        {
+          "id": "edge_6",
+          "from": "node_5",
+          "to": "node_7",
+          "label": "includes"
+        },
+        {
+          "id": "edge_7",
+          "from": "node_5",
+          "to": "node_8",
+          "label": "includes"
+        },
+        {
+          "id": "edge_8",
+          "from": "node_5",
+          "to": "node_9",
+          "label": "includes"
+        },
+        {
+          "id": "edge_9",
+          "from": "node_1",
+          "to": "node_10",
+          "label": "includes"
+        },
+        {
+          "id": "edge_10",
+          "from": "node_10",
+          "to": "node_11",
+          "label": "step 1"
+        },
+        {
+          "id": "edge_11",
+          "from": "node_10",
+          "to": "node_4",
+          "label": "step 2"
+        },
+        {
+          "id": "edge_12",
+          "from": "node_10",
+          "to": "node_12",
+          "label": "step 3"
+        },
+        {
+          "id": "edge_13",
+          "from": "node_10",
+          "to": "node_13",
+          "label": "step 4"
+        },
+        {
+          "id": "edge_14",
+          "from": "node_10",
+          "to": "node_14",
+          "label": "step 5"
+        },
+        {
+          "id": "edge_15",
+          "from": "node_10",
+          "to": "node_15",
+          "label": "step 6"
+        },
+        {
+          "id": "edge_16",
+          "from": "node_16",
+          "to": "node_17",
+          "label": "includes"
+        },
+        {
+          "id": "edge_17",
+          "from": "node_16",
+          "to": "node_18",
+          "label": "includes"
+        },
+        {
+          "id": "edge_18",
+          "from": "node_16",
+          "to": "node_19",
+          "label": "includes"
+        },
+        {
+          "id": "edge_19",
+          "from": "node_16",
+          "to": "node_20",
+          "label": "includes"
+        },
+        {
+          "id": "edge_20",
+          "from": "node_16",
+          "to": "node_21",
+          "label": "includes"
+        },
+        {
+          "id": "edge_21",
+          "from": "node_16",
+          "to": "node_22",
+          "label": "includes"
+        },
+        {
+          "id": "edge_22",
+          "from": "node_16",
+          "to": "node_23",
+          "label": "includes"
+        },
+        {
+          "id": "edge_23",
+          "from": "node_16",
+          "to": "node_24",
+          "label": "includes"
+        },
+        {
+          "id": "edge_24",
+          "from": "node_16",
+          "to": "node_25",
+          "label": "includes"
+        },
+        {
+          "id": "edge_25",
+          "from": "node_16",
+          "to": "node_26",
+          "label": "includes"
+        },
+        {
+          "id": "edge_26",
+          "from": "node_16",
+          "to": "node_27",
+          "label": "includes"
+        },
+        {
+          "id": "edge_27",
+          "from": "node_16",
+          "to": "node_28",
+          "label": "includes"
+        },
+        {
+          "id": "edge_28",
+          "from": "node_16",
+          "to": "node_29",
+          "label": "includes"
+        },
+        {
+          "id": "edge_29",
+          "from": "node_16",
+          "to": "node_30",
+          "label": "includes"
+        },
+        {
+          "id": "edge_30",
+          "from": "node_16",
+          "to": "node_31",
+          "label": "includes"
+        },
+        {
+          "id": "edge_31",
+          "from": "node_4",
+          "to": "node_16",
+          "label": "detailed in"
+        },
+        {
+          "id": "edge_32",
+          "from": "node_11",
+          "to": "node_25",
+          "label": "evolution"
+        },
+        {
+          "id": "edge_33",
+          "from": "node_3",
+          "to": "node_29",
+          "label": "discusses"
+        },
+        {
+          "id": "edge_34",
+          "from": "node_32",
+          "to": "node_33",
+          "label": "includes"
+        },
+        {
+          "id": "edge_35",
+          "from": "node_32",
+          "to": "node_34",
+          "label": "includes"
+        },
+        {
+          "id": "edge_36",
+          "from": "node_32",
+          "to": "node_35",
+          "label": "includes"
+        },
+        {
+          "id": "edge_37",
+          "from": "node_32",
+          "to": "node_36",
+          "label": "includes"
+        },
+        {
+          "id": "edge_38",
+          "from": "node_32",
+          "to": "node_37",
+          "label": "includes"
+        },
+        {
+          "id": "edge_39",
+          "from": "node_32",
+          "to": "node_38",
+          "label": "includes"
+        },
+        {
+          "id": "edge_40",
+          "from": "node_32",
+          "to": "node_39",
+          "label": "includes"
+        },
+        {
+          "id": "edge_41",
+          "from": "node_32",
+          "to": "node_40",
+          "label": "includes"
+        },
+        {
+          "id": "edge_42",
+          "from": "node_16",
+          "to": "node_32",
+          "label": "explores"
+        },
+        {
+          "id": "edge_43",
+          "from": "node_19",
+          "to": "node_32",
+          "label": "detailed in"
+        }
+      ]
+    },
+    "graph_building_complete": true
+  }
+}

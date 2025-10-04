@@ -1,0 +1,227 @@
+{
+  "nodes": [
+    {
+      "id": "node_1",
+      "title": "Introduction and Internship Process",
+      "type": "central"
+    },
+    {
+      "id": "node_2",
+      "title": "Mohamad Bazzi",
+      "type": "subnode"
+    },
+    {
+      "id": "node_3",
+      "title": "UBC Affiliation",
+      "type": "subnode"
+    },
+    {
+      "id": "node_4",
+      "title": "AI Research Intern",
+      "type": "subnode"
+    },
+    {
+      "id": "node_5",
+      "title": "Prepare CV & SOP",
+      "type": "subnode"
+    },
+    {
+      "id": "node_6",
+      "title": "Cold-emailing",
+      "type": "subnode"
+    },
+    {
+      "id": "node_7",
+      "title": "Interview Process",
+      "type": "subnode"
+    },
+    {
+      "id": "node_8",
+      "title": "Visa & Travel",
+      "type": "subnode"
+    },
+    {
+      "id": "node_9",
+      "title": "Personal Branding and Professional Tools",
+      "type": "central"
+    },
+    {
+      "id": "node_10",
+      "title": "Personal Website",
+      "type": "subnode"
+    },
+    {
+      "id": "node_11",
+      "title": "Efficient Cold Emailing",
+      "type": "subnode"
+    },
+    {
+      "id": "node_12",
+      "title": "Interview Preparation and Presentation",
+      "type": "central"
+    },
+    {
+      "id": "node_13",
+      "title": "Research Interview Tips",
+      "type": "subnode"
+    },
+    {
+      "id": "node_14",
+      "title": "Self-Presentation",
+      "type": "subnode"
+    },
+    {
+      "id": "node_15",
+      "title": "Highlight Previous Work",
+      "type": "subnode"
+    },
+    {
+      "id": "node_16",
+      "title": "Visa Interview Challenges",
+      "type": "central"
+    },
+    {
+      "id": "node_17",
+      "title": "Interview Rejections",
+      "type": "subnode"
+    },
+    {
+      "id": "node_18",
+      "title": "Emotional Experiences",
+      "type": "subnode"
+    },
+    {
+      "id": "node_19",
+      "title": "Perseverance",
+      "type": "subnode"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_1",
+      "from": "node_1",
+      "to": "node_2",
+      "label": "highlights"
+    },
+    {
+      "id": "edge_2",
+      "from": "node_2",
+      "to": "node_3",
+      "label": "affiliated with"
+    },
+    {
+      "id": "edge_3",
+      "from": "node_1",
+      "to": "node_4",
+      "label": "includes"
+    },
+    {
+      "id": "edge_4",
+      "from": "node_4",
+      "to": "node_5",
+      "label": "step"
+    },
+    {
+      "id": "edge_5",
+      "from": "node_4",
+      "to": "node_6",
+      "label": "step"
+    },
+    {
+      "id": "edge_6",
+      "from": "node_4",
+      "to": "node_7",
+      "label": "step"
+    },
+    {
+      "id": "edge_7",
+      "from": "node_4",
+      "to": "node_8",
+      "label": "step"
+    },
+    {
+      "id": "edge_8",
+      "from": "node_9",
+      "to": "node_10",
+      "label": "includes"
+    },
+    {
+      "id": "edge_9",
+      "from": "node_9",
+      "to": "node_11",
+      "label": "includes"
+    },
+    {
+      "id": "edge_10",
+      "from": "node_2",
+      "to": "node_9",
+      "label": "focuses on"
+    },
+    {
+      "id": "edge_11",
+      "from": "node_6",
+      "to": "node_11",
+      "label": "related to"
+    },
+    {
+      "id": "edge_12",
+      "from": "node_12",
+      "to": "node_13",
+      "label": "includes"
+    },
+    {
+      "id": "edge_13",
+      "from": "node_12",
+      "to": "node_14",
+      "label": "emphasizes"
+    },
+    {
+      "id": "edge_14",
+      "from": "node_12",
+      "to": "node_15",
+      "label": "focuses on"
+    },
+    {
+      "id": "edge_15",
+      "from": "node_7",
+      "to": "node_12",
+      "label": "involves"
+    },
+    {
+      "id": "edge_16",
+      "from": "node_14",
+      "to": "node_9",
+      "label": "related to"
+    },
+    {
+      "id": "edge_17",
+      "from": "node_16",
+      "to": "node_17",
+      "label": "includes"
+    },
+    {
+      "id": "edge_18",
+      "from": "node_16",
+      "to": "node_18",
+      "label": "includes"
+    },
+    {
+      "id": "edge_19",
+      "from": "node_16",
+      "to": "node_19",
+      "label": "includes"
+    },
+    {
+      "id": "edge_20",
+      "from": "node_8",
+      "to": "node_16",
+      "label": "involves"
+    },
+    {
+      "id": "edge_21",
+      "from": "node_7",
+      "to": "node_16",
+      "label": "related to"
+    }
+  ]
+}

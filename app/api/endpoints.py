@@ -5,11 +5,13 @@ import aiofiles
 import os
 from pathlib import Path
 from datetime import datetime
+import logging
 
 from app.core.models import PDFUploadResponse, ErrorResponse
 from app.services.pdf_processor import PDFProcessor
 
 router = APIRouter()
+logger = logging.getLogger(__name__)
 
 # Create uploads directory if it doesn't exist
 UPLOAD_DIR = Path("uploads")
@@ -36,6 +38,11 @@ async def upload_pdf(
     Returns processing results and file information.
     """
     
+    logger.info(f"=" * 80)
+    logger.info(f"📥 NEW PDF UPLOAD REQUEST")
+    logger.info(f"Filename: {file.filename}")
+    logger.info(f"=" * 80)
+    
     # Validate file type
     if not file.content_type == "application/pdf":
         raise HTTPException(
@@ -52,8 +59,10 @@ async def upload_pdf(
     
     try:
         # Read file content
+        logger.info("Reading file content...")
         contents = await file.read()
         file_size = len(contents)
+        logger.info(f"File size: {file_size / (1024*1024):.2f} MB")
         
         # Validate file size
         if file_size > MAX_FILE_SIZE:
@@ -74,12 +83,22 @@ async def upload_pdf(
         file_path = UPLOAD_DIR / safe_filename
         
         # Save file asynchronously
+        logger.info(f"Saving file to: {file_path}")
         async with aiofiles.open(file_path, 'wb') as f:
             await f.write(contents)
+        logger.info("✅ File saved successfully")
         
         # Process the PDF
+        logger.info("🚀 Starting PDF processing with LangGraph...")
+        logger.info("=" * 80)
         processor = PDFProcessor()
         processing_result = await processor.process_pdf(file_path)
+        
+        logger.info("=" * 80)
+        logger.info("✅ PDF PROCESSING COMPLETE!")
+        logger.info(f"Total nodes: {processing_result['metadata']['total_nodes']}")
+        logger.info(f"Total edges: {processing_result['metadata']['total_edges']}")
+        logger.info("=" * 80)
         
         return PDFUploadResponse(
             success=True,
@@ -95,6 +114,7 @@ async def upload_pdf(
         # Re-raise HTTP exceptions
         raise
     except Exception as e:
+        logger.error(f"❌ ERROR: {str(e)}", exc_info=True)
         # Clean up file if it was saved
         if 'file_path' in locals() and file_path.exists():
             os.remove(file_path)

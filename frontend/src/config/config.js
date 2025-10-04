@@ -1,10 +1,11 @@
 // Configuration file
 export const CONFIG = {
     // API Configuration
-    API_BASE_URL: 'http://localhost:8001',  // Changed from 8000 to 8001
+    API_BASE_URL: 'http://localhost:8001',
     API_ENDPOINTS: {
         UPLOAD_PDF: '/api/upload-pdf',
         DELETE_PDF: '/api/delete-pdf',
+        GET_GRAPH: '/api/get-graph',
     },
     
     // File Upload Configuration
@@ -14,14 +15,8 @@ export const CONFIG = {
     
     // UI Configuration
     ROUTES: {
-        UPLOAD: 'upload',
-        GRAPH: 'graph',
+        UPLOAD: '/',
+        GRAPH: '/graph',
     },
-    
-    // Feature Flags (for future features)
-    FEATURES: {
-        GRAPH_VIEW: false, // Enable when ready
-        ADVANCED_PROCESSING: false,
-    }
 };
 

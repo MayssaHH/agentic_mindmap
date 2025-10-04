@@ -1,0 +1,267 @@
+/* Graph Page Styles */
+.graph-page {
+    width: 100%;
+    height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+}
+
+.graph-container {
+    background: var(--bg-primary);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+/* React Flow customization */
+.react-flow {
+    background: #fafafa;
+}
+
+.react-flow__node {
+    transition: all 0.3s ease;
+}
+
+.react-flow__node:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2) !important;
+}
+
+.react-flow__edge-path {
+    transition: all 0.2s ease;
+}
+
+.react-flow__edge:hover .react-flow__edge-path {
+    stroke-width: 4px !important;
+    stroke-opacity: 1 !important;
+}
+
+.react-flow__edge-label {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.react-flow__minimap {
+    background: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+}
+
+.react-flow__controls {
+    background: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+}
+
+.react-flow__controls-button {
+    background: white;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.react-flow__controls-button:hover {
+    background: #f3f4f6;
+}
+
+.react-flow__controls-button:last-child {
+    border-bottom: none;
+}
+
+/* Panels */
+.stats-panel {
+    background: white !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: var(--shadow-lg) !important;
+    padding: var(--spacing-lg) !important;
+    min-width: 220px !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.stats-header h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: var(--spacing-sm);
+}
+
+.stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    padding: var(--spacing-sm);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.stat-value {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 16px;
+}
+
+.selected-node-info {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+}
+
+.selected-node-info h4 {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.selected-node-info p {
+    font-size: 13px;
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.5;
+}
+
+.node-type {
+    color: var(--text-secondary);
+    font-size: 11px !important;
+    font-style: italic;
+}
+
+.controls-panel {
+    background: transparent !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-sm) !important;
+}
+
+.btn-control {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: white;
+    color: var(--text-primary);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: var(--shadow-md);
+    white-space: nowrap;
+}
+
+.btn-control:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-control:active {
+    transform: translateY(0);
+}
+
+/* Empty state */
+.graph-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--text-secondary);
+    max-width: 400px;
+}
+
+.message-icon {
+    font-size: 64px;
+    margin-bottom: var(--spacing-lg);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.graph-message h3 {
+    font-size: 20px;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.graph-message p {
+    font-size: 14px;
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.react-flow__node {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .graph-page {
+        height: calc(100vh - 140px);
+    }
+
+    .stats-panel {
+        min-width: 180px !important;
+        padding: var(--spacing-md) !important;
+    }
+
+    .controls-panel {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+    }
+
+    .btn-control {
+        font-size: 12px;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+}
+
+/* Better edge styling */
+.react-flow__edge.animated .react-flow__edge-path {
+    stroke-dasharray: 5;
+    animation: dashdraw 0.5s linear infinite;
+}
+
+@keyframes dashdraw {
+    to {
+        stroke-dashoffset: -10;
+    }
+}

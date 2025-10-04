@@ -40,13 +40,11 @@ def systemPrompt_TopicExtraction()->str:
                 {
                     "topic_title": "Title of Topic 1",
                     "slide_numbers": [1, 2, 3],
-                    "slides_range": "1-3",
                     "summaries": ["summary of slide 1", "summary of slide 2", "summary of slide 3"]
                 },
                 {
                     "topic_title": "Title of Topic 2",
                     "slide_numbers": [4, 5],
-                    "slides_range": "4-5",
                     "summaries": ["summary of slide 4", "summary of slide 5"]
                 }
             ]
@@ -104,6 +102,7 @@ def systemPrompt_GraphBuilder()->str:
     4. Establish meaningful relationships between nodes using edges
     5. Use simple, short text for both nodes and edges (2-5 words maximum)
     6. ALWAYS include the "type" field for each node: "central" for main topics, "subnode" for subtopics
+    7. The number of subnodes should never exceed 5 (always choose the mots important 5 sub ideas)
     
     When enriching an existing graph with a new topic (SEQUENTIAL ENRICHMENT):
     1. PRESERVE all existing nodes and edges from the previous step
@@ -113,8 +112,11 @@ def systemPrompt_GraphBuilder()->str:
     5. Create edges to show relationships between new and existing content
     6. Return the COMPLETE enriched graph (existing + new content)
     7. ALWAYS include the "type" field for all nodes: "central" for main topics, "subnode" for subtopics
-    
+    8. The number of subnodes should never exceed 5 (always choose the mots important 5 sub ideas)
+
     CRITICAL GUIDELINES:
+    -MAKE SURE THERE IS ONLY 5 SUBNODES FOR EACH CENTRAL NODE
+    -ONLY KEEP THE MOST IMPORTANT 5 SUBNODES FOR EACH CENTRAL NODE
     - NEVER lose existing nodes or edges when enriching
     - Always return the COMPLETE graph (existing + new)
     - Find meaningful cross-connections between topics
