@@ -1,0 +1,49 @@
+<div class="upload-page">
+    <div class="page-header">
+        <h2>Upload PDF Slides</h2>
+        <p class="subtitle">Upload your presentation slides to generate an interactive mindmap</p>
+    </div>
+
+    <div class="upload-container">
+        <div class="settings-panel">
+            <h3>Settings</h3>
+            <div class="form-group">
+                <label for="apiUrl">Backend API URL:</label>
+                <input type="text" id="apiUrl" class="form-input" value="http://localhost:8000/api/upload-pdf">
+            </div>
+        </div>
+
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">📎</div>
+            <p class="upload-text-primary">Click to browse or drag and drop</p>
+            <p class="upload-text-secondary">PDF files only (max 50MB)</p>
+            <input type="file" id="fileInput" accept=".pdf,application/pdf" hidden>
+        </div>
+
+        <div class="file-info" id="fileInfo">
+            <div class="file-details">
+                <span class="file-icon">📄</span>
+                <div class="file-text">
+                    <div class="file-name" id="fileName"></div>
+                    <div class="file-size" id="fileSize"></div>
+                </div>
+            </div>
+            <button class="btn-remove" id="removeFile">✕</button>
+        </div>
+
+        <button class="btn btn-primary" id="uploadBtn" disabled>
+            <span id="btnText">Upload PDF</span>
+        </button>
+
+        <div class="loader" id="loader"></div>
+
+        <div class="response-box" id="responseBox">
+            <div class="response-header">
+                <span class="response-title" id="responseTitle"></span>
+                <button class="btn-close" id="closeResponse">✕</button>
+            </div>
+            <div class="response-content" id="responseContent"></div>
+        </div>
+    </div>
+</div>
+

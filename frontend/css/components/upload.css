@@ -1,0 +1,220 @@
+/* Upload Page Styles */
+.upload-page {
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    padding: var(--spacing-2xl);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.page-header h2 {
+    font-size: 28px;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.upload-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Settings Panel */
+.settings-panel {
+    background: var(--bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.settings-panel h3 {
+    font-size: 18px;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+/* Upload Area */
+.upload-area {
+    border: 3px dashed var(--primary-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-2xl);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: var(--spacing-lg);
+}
+
+.upload-area:hover {
+    border-color: var(--primary-dark);
+    background-color: #f8f9ff;
+}
+
+.upload-area.dragover {
+    background-color: #e8ebff;
+    border-color: var(--primary-dark);
+    transform: scale(1.02);
+}
+
+.upload-icon {
+    font-size: 48px;
+    margin-bottom: var(--spacing-md);
+}
+
+.upload-text-primary {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.upload-text-secondary {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* File Info */
+.file-info {
+    display: none;
+    background: var(--bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-lg);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.file-info.show {
+    display: flex;
+}
+
+.file-details {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.file-icon {
+    font-size: 32px;
+}
+
+.file-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.file-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.file-size {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.btn-remove {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 20px;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s;
+}
+
+.btn-remove:hover {
+    background: var(--error-color);
+    color: white;
+}
+
+/* Upload Button */
+#uploadBtn {
+    width: 100%;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Response Box */
+.response-box {
+    display: none;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-top: var(--spacing-xl);
+}
+
+.response-box.show {
+    display: block;
+}
+
+.response-box.success {
+    border: 2px solid var(--success-color);
+}
+
+.response-box.error {
+    border: 2px solid var(--error-color);
+}
+
+.response-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg);
+    font-weight: 600;
+}
+
+.response-box.success .response-header {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.response-box.error .response-header {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.btn-close {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    color: inherit;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}
+
+.response-content {
+    padding: var(--spacing-lg);
+    background: white;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .upload-page {
+        padding: var(--spacing-lg);
+    }
+    
+    .app-header .container {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+}
+
