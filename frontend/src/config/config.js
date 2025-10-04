@@ -1,7 +1,8 @@
 // Configuration file
 export const CONFIG = {
     // API Configuration
-    API_BASE_URL: 'http://localhost:8001',
+    // Use relative URL in production (Docker), absolute URL in development
+    API_BASE_URL: import.meta.env.PROD ? '' : 'http://localhost:8000',
     API_ENDPOINTS: {
         UPLOAD_PDF: '/api/upload-pdf',
         DELETE_PDF: '/api/delete-pdf',

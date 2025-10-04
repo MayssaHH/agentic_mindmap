@@ -18,6 +18,46 @@ An intelligent system that converts PDF lecture slides into interactive knowledg
 
 ## 🛠️ Installation
 
+### 🐳 Docker Setup (Recommended)
+
+The easiest way to run the application is using Docker:
+
+1. **Clone the repository and navigate to it**
+   ```bash
+   cd agentic_mindmap
+   ```
+
+2. **Set up environment variables**
+   ```bash
+   cp env.template .env
+   ```
+   Then edit `.env` and add your OpenAI API key:
+   ```env
+   OPENAI_API_KEY=your_openai_api_key_here
+   ```
+
+3. **Build and run with Docker Compose**
+   ```bash
+   docker-compose up --build -d
+   ```
+   
+   The application will be available at `http://localhost:8000`
+   - Frontend: `http://localhost:8000`
+   - API Docs: `http://localhost:8000/docs`
+   - Health Check: `http://localhost:8000/health`
+
+4. **View logs** (optional)
+   ```bash
+   docker-compose logs -f agentic-mindmap
+   ```
+
+5. **Stop the application**
+   ```bash
+   docker-compose down
+   ```
+
+### Manual Setup
+
 ### Backend Setup
 
 1. **Clone the repository**

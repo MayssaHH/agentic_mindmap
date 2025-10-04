@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  agentic-mindmap:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: agentic-mindmap:latest
+    container_name: agentic-mindmap-app
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PORT=8000
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - LANGCHAIN_API_KEY=${LANGCHAIN_API_KEY:-}
+      - LANGCHAIN_TRACING_V2=${LANGCHAIN_TRACING_V2:-false}
+    volumes:
+      # Mount uploads directory to persist uploaded files
+      - ./uploads:/app/uploads
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    networks:
+      - mindmap-network
+
+networks:
+  mindmap-network:
+    driver: bridge
+
+volumes:
+  uploads:
+    driver: local
+
