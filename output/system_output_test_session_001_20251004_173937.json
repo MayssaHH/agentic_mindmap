@@ -1,0 +1,344 @@
+{
+  "metadata": {
+    "thread_id": "test_session_001",
+    "created_at": "2025-10-04T17:39:37.471389",
+    "source_file": "/Users/Mayssa/Desktop/agentic_mindmap/docs/InternshipPannel_Mayssa.pdf",
+    "total_pages": 2,
+    "total_topics": 2,
+    "graph_nodes": 26,
+    "graph_edges": 26
+  },
+  "processing_results": {
+    "page_summaries": [
+      {
+        "page_number": 1,
+        "summary": "**Mayssa Hajj Hassan - Data Engineering Intern at THALES**\n\n- **About THALES:**\n  - Global technology company in defense, aerospace, transportation, security, and digital identity.\n  - Over 50 years of innovation, 80,000+ employees, operating in 68 countries.\n  - Specializes in secure, mission-critical technologies.\n\n- **Application Process:**\n  1. Application Submission\n  2. Technical Interview\n  3. HR Interview\n  4. Internship Offer\n\n- **Personal Contributions:**\n  - **Technical Role:** Implemented solutions for testing, monitoring, and debugging data pipelines.\n  - **Team Collaboration:** Worked with a team of 3 data engineers using Agile methodologies.\n  - **PO Feedback:** Presented solutions and explained algorithms for workflow reliability."
+      },
+      {
+        "page_number": 2,
+        "summary": "**Mayssa Hajj Hassan - Data Engineering Intern at THALES**\n\n- **Program Overview:**\n  - **2025 Training Program:** Focus on skill investment and learning culture.\n  - **Interns:** 15 selected from diverse Lebanese universities.\n  - **Duration:** 6-month training program, second consecutive edition.\n\n- **Objectives:**\n  - Strengthen partnerships with local academic institutions.\n  - Drive upskilling at scale.\n  - Enrich work culture with fresh perspectives.\n\n- **Commitment:**\n  - Provide dynamic, hands-on experiences to shape professional journeys.\n\n- **CCOE Motto:** Challenge – Connect – Overcome – Enjoy\n\n- **Visuals:**\n  - Group photo of interns.\n  - Online meeting screenshot.\n  - Coffee and meal images.\n  - Health insurance card."
+      }
+    ],
+    "topics": {
+      "topic_names": [
+        "Internship Experience at THALES",
+        "THALES Training Program Overview"
+      ],
+      "topic_details": [
+        {
+          "topic_title": "Internship Experience at THALES",
+          "slide_numbers": [
+            1
+          ],
+          "slides_range": "1",
+          "summaries": [
+            "Mayssa Hajj Hassan - Data Engineering Intern at THALES\n\n- About THALES:\n  - Global technology company in defense, aerospace, transportation, security, and digital identity.\n  - Over 50 years of innovation, 80,000+ employees, operating in 68 countries.\n  - Specializes in secure, mission-critical technologies.\n\n- Application Process:\n  1. Application Submission\n  2. Technical Interview\n  3. HR Interview\n  4. Internship Offer\n\n- Personal Contributions:\n  - Technical Role: Implemented solutions for testing, monitoring, and debugging data pipelines.\n  - Team Collaboration: Worked with a team of 3 data engineers using Agile methodologies.\n  - PO Feedback: Presented solutions and explained algorithms for workflow reliability."
+          ]
+        },
+        {
+          "topic_title": "THALES Training Program Overview",
+          "slide_numbers": [
+            2
+          ],
+          "slides_range": "2",
+          "summaries": [
+            "Mayssa Hajj Hassan - Data Engineering Intern at THALES\n\n- Program Overview:\n  - 2025 Training Program: Focus on skill investment and learning culture.\n  - Interns: 15 selected from diverse Lebanese universities.\n  - Duration: 6-month training program, second consecutive edition.\n\n- Objectives:\n  - Strengthen partnerships with local academic institutions.\n  - Drive upskilling at scale.\n  - Enrich work culture with fresh perspectives.\n\n- Commitment:\n  - Provide dynamic, hands-on experiences to shape professional journeys.\n\n- CCOE Motto: Challenge – Connect – Overcome – Enjoy\n\n- Visuals:\n  - Group photo of interns.\n  - Online meeting screenshot.\n  - Coffee and meal images.\n  - Health insurance card."
+          ]
+        }
+      ]
+    },
+    "final_graph": {
+      "nodes": [
+        {
+          "id": "node_1",
+          "title": "Internship Experience at THALES",
+          "type": "central"
+        },
+        {
+          "id": "node_2",
+          "title": "About THALES",
+          "type": "subnode"
+        },
+        {
+          "id": "node_3",
+          "title": "Application Process",
+          "type": "subnode"
+        },
+        {
+          "id": "node_4",
+          "title": "Personal Contributions",
+          "type": "subnode"
+        },
+        {
+          "id": "node_5",
+          "title": "Global Tech Company",
+          "type": "subnode"
+        },
+        {
+          "id": "node_6",
+          "title": "50+ Years Innovation",
+          "type": "subnode"
+        },
+        {
+          "id": "node_7",
+          "title": "80,000+ Employees",
+          "type": "subnode"
+        },
+        {
+          "id": "node_8",
+          "title": "68 Countries",
+          "type": "subnode"
+        },
+        {
+          "id": "node_9",
+          "title": "Secure Technologies",
+          "type": "subnode"
+        },
+        {
+          "id": "node_10",
+          "title": "Application Submission",
+          "type": "subnode"
+        },
+        {
+          "id": "node_11",
+          "title": "Technical Interview",
+          "type": "subnode"
+        },
+        {
+          "id": "node_12",
+          "title": "HR Interview",
+          "type": "subnode"
+        },
+        {
+          "id": "node_13",
+          "title": "Internship Offer",
+          "type": "subnode"
+        },
+        {
+          "id": "node_14",
+          "title": "Technical Role",
+          "type": "subnode"
+        },
+        {
+          "id": "node_15",
+          "title": "Team Collaboration",
+          "type": "subnode"
+        },
+        {
+          "id": "node_16",
+          "title": "PO Feedback",
+          "type": "subnode"
+        },
+        {
+          "id": "node_17",
+          "title": "THALES Training Program Overview",
+          "type": "central"
+        },
+        {
+          "id": "node_18",
+          "title": "2025 Training Program",
+          "type": "subnode"
+        },
+        {
+          "id": "node_19",
+          "title": "15 Interns",
+          "type": "subnode"
+        },
+        {
+          "id": "node_20",
+          "title": "6-Month Duration",
+          "type": "subnode"
+        },
+        {
+          "id": "node_21",
+          "title": "Strengthen Partnerships",
+          "type": "subnode"
+        },
+        {
+          "id": "node_22",
+          "title": "Drive Upskilling",
+          "type": "subnode"
+        },
+        {
+          "id": "node_23",
+          "title": "Enrich Work Culture",
+          "type": "subnode"
+        },
+        {
+          "id": "node_24",
+          "title": "Dynamic Experiences",
+          "type": "subnode"
+        },
+        {
+          "id": "node_25",
+          "title": "CCOE Motto",
+          "type": "subnode"
+        },
+        {
+          "id": "node_26",
+          "title": "Visuals",
+          "type": "subnode"
+        }
+      ],
+      "edges": [
+        {
+          "id": "edge_1",
+          "from": "node_1",
+          "to": "node_2",
+          "label": "includes"
+        },
+        {
+          "id": "edge_2",
+          "from": "node_1",
+          "to": "node_3",
+          "label": "includes"
+        },
+        {
+          "id": "edge_3",
+          "from": "node_1",
+          "to": "node_4",
+          "label": "includes"
+        },
+        {
+          "id": "edge_4",
+          "from": "node_2",
+          "to": "node_5",
+          "label": "is"
+        },
+        {
+          "id": "edge_5",
+          "from": "node_2",
+          "to": "node_6",
+          "label": "has"
+        },
+        {
+          "id": "edge_6",
+          "from": "node_2",
+          "to": "node_7",
+          "label": "has"
+        },
+        {
+          "id": "edge_7",
+          "from": "node_2",
+          "to": "node_8",
+          "label": "operates in"
+        },
+        {
+          "id": "edge_8",
+          "from": "node_2",
+          "to": "node_9",
+          "label": "specializes in"
+        },
+        {
+          "id": "edge_9",
+          "from": "node_3",
+          "to": "node_10",
+          "label": "step"
+        },
+        {
+          "id": "edge_10",
+          "from": "node_3",
+          "to": "node_11",
+          "label": "step"
+        },
+        {
+          "id": "edge_11",
+          "from": "node_3",
+          "to": "node_12",
+          "label": "step"
+        },
+        {
+          "id": "edge_12",
+          "from": "node_3",
+          "to": "node_13",
+          "label": "step"
+        },
+        {
+          "id": "edge_13",
+          "from": "node_4",
+          "to": "node_14",
+          "label": "includes"
+        },
+        {
+          "id": "edge_14",
+          "from": "node_4",
+          "to": "node_15",
+          "label": "includes"
+        },
+        {
+          "id": "edge_15",
+          "from": "node_4",
+          "to": "node_16",
+          "label": "includes"
+        },
+        {
+          "id": "edge_16",
+          "from": "node_17",
+          "to": "node_18",
+          "label": "includes"
+        },
+        {
+          "id": "edge_17",
+          "from": "node_17",
+          "to": "node_19",
+          "label": "includes"
+        },
+        {
+          "id": "edge_18",
+          "from": "node_17",
+          "to": "node_20",
+          "label": "includes"
+        },
+        {
+          "id": "edge_19",
+          "from": "node_17",
+          "to": "node_21",
+          "label": "aims to"
+        },
+        {
+          "id": "edge_20",
+          "from": "node_17",
+          "to": "node_22",
+          "label": "aims to"
+        },
+        {
+          "id": "edge_21",
+          "from": "node_17",
+          "to": "node_23",
+          "label": "aims to"
+        },
+        {
+          "id": "edge_22",
+          "from": "node_17",
+          "to": "node_24",
+          "label": "committed to"
+        },
+        {
+          "id": "edge_23",
+          "from": "node_17",
+          "to": "node_25",
+          "label": "follows"
+        },
+        {
+          "id": "edge_24",
+          "from": "node_17",
+          "to": "node_26",
+          "label": "includes"
+        },
+        {
+          "id": "edge_25",
+          "from": "node_1",
+          "to": "node_17",
+          "label": "part of"
+        },
+        {
+          "id": "edge_26",
+          "from": "node_2",
+          "to": "node_21",
+          "label": "partners with"
+        }
+      ]
+    },
+    "graph_building_complete": true
+  }
+}

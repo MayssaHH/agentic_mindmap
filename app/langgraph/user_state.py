@@ -14,4 +14,5 @@ class userState(TypedDict):
     contextWindow_topics: dict[str,list[AnyMessage]] # str: topic title, list: messages in the context window
 
     graph: dict[str, list[dict[str,str]]] # str: nodes, edges, the list is a dict with keys id, title, .... and values their corresponding values
-    last_graph_updated: dict[str, list[dict[str,str]]] # return only the new nodes and edges that were added to the graph
+    graph_building_complete: bool # Flag to indicate if all topics have been processed
+    export_file_path: str # Path to the exported JSON file containing the complete system output

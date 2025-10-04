@@ -1,13 +1,15 @@
 from app.langgraph.user_state import userState
 from langchain_core.messages import HumanMessage,  SystemMessage
 from langgraph.graph import StateGraph, END
-from app.langgraph.prompts import systemPrompt_PagesSummary, messagePrompt_PagesSummary, systemPrompt_TopicExtraction, messagePrompt_TopicExtraction
+from app.langgraph.prompts import systemPrompt_PagesSummary, messagePrompt_PagesSummary, systemPrompt_TopicExtraction, messagePrompt_TopicExtraction, systemPrompt_GraphBuilder, messagePrompt_GraphBuilder_Initial, messagePrompt_GraphBuilder_Enrichment
 from langsmith import trace
 import logging
 from langchain_openai import ChatOpenAI
 from app.langgraph.functions import pdf_page_to_base64, number_of_pages_in_pdf
 import asyncio
 import json
+import os
+from datetime import datetime
 
 
 model_4o = ChatOpenAI(
@@ -18,6 +20,61 @@ model_4o = ChatOpenAI(
 )
 
 logger = logging.getLogger(__name__)
+
+def save_final_system_output(state: dict, output_dir: str = "output") -> str:
+    """
+    Save the complete final output of the system to a JSON file.
+    This includes all processing results: page summaries, topics, and the final graph.
+    
+    Args:
+        state: Complete user state with all processing results
+        output_dir: Directory to save the file (default: "output")
+    
+    Returns:
+        str: Path to the saved file
+    """
+    try:
+        # Create output directory if it doesn't exist
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # Generate filename with timestamp
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        thread_id = state.get('thread_id', 'unknown')
+        filename = f"system_output_{thread_id}_{timestamp}.json"
+        filepath = os.path.join(output_dir, filename)
+        
+        # Prepare the complete system output
+        system_output = {
+            "metadata": {
+                "thread_id": thread_id,
+                "created_at": datetime.now().isoformat(),
+                "source_file": state.get('path', 'unknown'),
+                "total_pages": state.get('nb_pages', 0),
+                "total_topics": state.get('nb_topics', 0),
+                "graph_nodes": len(state.get('graph', {}).get('nodes', [])),
+                "graph_edges": len(state.get('graph', {}).get('edges', []))
+            },
+            "processing_results": {
+                "page_summaries": state.get('page_summaries', []),
+                "topics": {
+                    "topic_names": state.get('name_topics', []),
+                    "topic_details": state.get('pages_topics', [])
+                },
+                "final_graph": state.get('graph', {}),
+                "graph_building_complete": state.get('graph_building_complete', False)
+            }
+        }
+        
+        # Save to JSON file
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(system_output, f, indent=2, ensure_ascii=False)
+        
+        logger.info(f"Complete system output saved to: {filepath}")
+        return filepath
+        
+    except Exception as e:
+        logger.error(f"Error saving system output to JSON: {str(e)}")
+        return None
 
 builder = StateGraph(userState)
 
@@ -161,16 +218,20 @@ async def extract_Topics_From_Summaries(state: userState) -> userState:
                 # Extract topic names
                 name_topics = [topic['topic_title'] for topic in topics_data]
                 
-                # Build pages_topics - mapping topic title to slide information
+                # Build pages_topics - mapping topic title to slide information with summaries
                 pages_topics = []
                 for topic in topics_data:
                     topic_entry = {
                         'topic_title': topic['topic_title'],
                         'slide_numbers': topic['slide_numbers'],
                         'slides_range': topic['slides_range'],
-                        'summaries': topic['summaries']
+                        'summaries': topic['summaries']  # This contains the summaries for this topic
                     }
                     pages_topics.append(topic_entry)
+                
+                logger.info(f"Extracted {len(topics_data)} topics with their summaries:")
+                for i, topic in enumerate(topics_data, 1):
+                    logger.info(f"  Topic {i}: {topic['topic_title']} ({len(topic['summaries'])} summaries)")
                 
                 # Update state
                 state['name_topics'] = name_topics
@@ -198,16 +259,131 @@ async def extract_Topics_From_Summaries(state: userState) -> userState:
             
     return state
 
+# Graph Builder Agent - Processes ALL topics sequentially in n iterations
+async def build_mind_map_graph(state: userState) -> userState:
+    with trace(name="build_mind_map_graph"):
+        logger.info("Node: build_mind_map_graph - Processing ALL topics sequentially")
+        
+        try:
+            # Get topics data
+            pages_topics = state.get('pages_topics', [])
+            nb_topics = len(pages_topics)
+            
+            if nb_topics == 0:
+                logger.warning("No topics found for graph building")
+                state['graph'] = {"nodes": [], "edges": []}
+                state['graph_building_complete'] = True
+                return state
+            
+            # Initialize empty graph
+            state['graph'] = {"nodes": [], "edges": []}
+            logger.info(f"Starting sequential graph building with {nb_topics} topics")
+            
+            # Process each topic sequentially (n iterations)
+            for i, topic in enumerate(pages_topics):
+                topic_title = topic['topic_title']
+                topic_summaries = topic['summaries']
+                
+                logger.info(f"Processing topic {i + 1}/{nb_topics}: {topic_title}")
+                logger.info(f"Current graph has {len(state['graph'].get('nodes', []))} nodes and {len(state['graph'].get('edges', []))} edges")
+                
+                # Prepare messages for the LLM
+                if i == 0:
+                    # First topic - create initial graph
+                    logger.info("Creating initial graph for first topic")
+                    messages = [
+                        SystemMessage(content=systemPrompt_GraphBuilder()),
+                        HumanMessage(content=messagePrompt_GraphBuilder_Initial(topic_title, topic_summaries))
+                    ]
+                else:
+                    # Subsequent topics - enrich existing graph
+                    logger.info(f"Enriching existing graph with topic: {topic_title}")
+                    messages = [
+                        SystemMessage(content=systemPrompt_GraphBuilder()),
+                        HumanMessage(content=messagePrompt_GraphBuilder_Enrichment(topic_title, topic_summaries, state['graph']))
+                    ]
+                
+                # Get LLM response
+                response = await model_4o.ainvoke(messages)
+                
+                # Parse the JSON response
+                try:
+                    response_text = response.content.strip()
+                    if response_text.startswith("```json"):
+                        response_text = response_text.split("```json")[1].split("```")[0].strip()
+                    elif response_text.startswith("```"):
+                        response_text = response_text.split("```")[1].split("```")[0].strip()
+                    
+                    updated_graph = json.loads(response_text)
+                    
+                    # Update the graph with the new enriched version
+                    state['graph'] = updated_graph
+                    
+                    logger.info(f"Successfully processed topic {i + 1}: {topic_title}")
+                    logger.info(f"Updated graph now has {len(updated_graph.get('nodes', []))} nodes and {len(updated_graph.get('edges', []))} edges")
+                    
+                    # Log the sequential progress
+                    if i == 0:
+                        logger.info("✅ Initial graph created")
+                    else:
+                        logger.info(f"✅ Graph enriched with topic {i + 1}")
+                    
+                except json.JSONDecodeError as e:
+                    logger.error(f"Failed to parse JSON response for topic {topic_title}: {str(e)}")
+                    logger.error(f"Response was: {response.content}")
+                    # Continue with next topic even if this one failed
+                    continue
+            
+            # Mark graph building as complete
+            state['graph_building_complete'] = True
+            logger.info(f"✅ Sequential graph building completed! Final graph has {len(state['graph'].get('nodes', []))} nodes and {len(state['graph'].get('edges', []))} edges")
+                
+        except Exception as e:
+            logger.error(f"Error in sequential graph building: {str(e)}")
+            state['graph_building_complete'] = True  # Mark as complete even if there was an error
+            
+    return state
+
+# Note: Removed should_continue_graph_building function since we now use fixed n iterations
+
+# Export final system output
+async def export_final_output(state: userState) -> userState:
+    """
+    Export and save the complete final output of the system to a JSON file.
+    This includes all processing results: page summaries, topics, and the final graph.
+    """
+    with trace(name="export_final_output"):
+        logger.info("Node: export_final_output")
+        
+        try:
+            # Save the complete system output
+            saved_path = save_final_system_output(state)
+            
+            if saved_path:
+                state['export_file_path'] = saved_path
+                logger.info(f"Final system output exported to: {saved_path}")
+            else:
+                logger.warning("Failed to export final system output")
+                
+        except Exception as e:
+            logger.error(f"Error in export_final_output: {str(e)}")
+            
+    return state
+
 # Add the agents to the StateGraph
 builder.add_node("get_pages_summary", get_Pages_Summary)
 builder.add_node("extract_topics", extract_Topics_From_Summaries)
+builder.add_node("build_graph", build_mind_map_graph)
+builder.add_node("export_output", export_final_output)
 
 # Set the entry point
 builder.set_entry_point("get_pages_summary")
 
-# Add edges to create the flow
+# Add edges to create the flow (no conditional logic needed - fixed n iterations)
 builder.add_edge("get_pages_summary", "extract_topics")
-builder.add_edge("extract_topics", END)
+builder.add_edge("extract_topics", "build_graph")
+builder.add_edge("build_graph", "export_output")
+builder.add_edge("export_output", END)
 
 # Compile the graph
 graph = builder.compile()
