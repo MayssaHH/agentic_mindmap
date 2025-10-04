@@ -9,11 +9,10 @@ def systemPrompt_PagesSummary()->str:
             - Visual elements and their significance
             - Any technical details or specifications
             
-        Provide a detailed, structured summary that captures the essence of the page.
+        Provide a concise, structured summary that captures the ESSENCE ONLY of the page.
     """
 
 def messagePrompt_PagesSummary()->str:
     return f"""
-    Analyze this page extracted from a powerpoint presentation/lecture and provide a comprehensive summary. 
-    Look for main topics, key information, data points, and any important details that would be relevant for creating a mind map.
+    Analyze this page extracted from a powerpoint presentation/lecture and provide a comprehensive, compact, structured summary that captures the ESSENCE ONLY of the page. 
     """

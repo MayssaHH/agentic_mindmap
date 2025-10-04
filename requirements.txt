@@ -1,21 +1,6 @@
-# FastAPI dependencies
-fastapi==0.104.1
-uvicorn[standard]==0.24.0
-python-multipart==0.0.6
-aiofiles==23.2.1
-pydantic==2.5.0
-pydantic-settings==2.1.0
-python-dotenv==1.0.0
-
-# PDF processing
-PyPDF2==3.0.1
-PyMuPDF>=1.23.0
-
-# LangChain and LangGraph
 langchain-openai>=0.1.0
 langgraph>=0.1.0
 langsmith>=0.1.0
-
-# Utilities
+PyMuPDF>=1.23.0
 tenacity>=8.2.0
 typing-extensions>=4.0.0
