@@ -1,5 +1,7 @@
 # Agentic Mindmap - PDF to Knowledge Graph
 
+![Image](architecture.png)
+
 An intelligent system that converts PDF lecture slides into interactive knowledge graphs using LangGraph and React.
 
 ## 🚀 Features
